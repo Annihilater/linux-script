@@ -21,6 +21,7 @@ apt install sudo -y
 
 # set alias ll
 echo "alias ll='ls -l'" >> /etc/profile && source /etc/profile
+source /etc/profile
 
 # check ssh_dir
 if [ ! -d "$ssh_dir" ]; then
