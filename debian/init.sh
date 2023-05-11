@@ -15,6 +15,8 @@ bash_sshd_config_path="/etc/ssh/sshd_config"
 apt update
 # install vim
 apt install vim -y
+apt install curl -y
+apt install htop -y
 
 # set alias ll
 echo "alias ll='ls -l'" >> /etc/profile && source /etc/profile
@@ -64,3 +66,46 @@ EOF
 
 # restart sshd
 systemctl restart sshd
+
+# 检查Docker是否已安装
+if ! command -v docker &> /dev/null; then
+    echo "Docker未安装，开始安装..."
+    
+    # 使用curl命令安装Docker
+    curl -fsSL https://get.docker.com | bash
+    
+    # 检查安装结果
+    if command -v docker &> /dev/null; then
+        echo -e "执行: ${GREEN}docker -v"
+        docker -v
+        echo -e "${GREEN}Docker安装成功！"
+    else
+        echo -e "${YELLOW}Docker安装失败，请检查安装过程中的错误信息。"
+    fi
+else
+    echo -e "${YELLOW}Docker已安装，无需重复安装。"
+fi
+
+# 检查Docker Compose是否已安装
+if ! command -v docker-compose &> /dev/null; then
+    echo "Docker Compose未安装，开始安装..."
+    
+    # 安装Docker Compose
+    curl -fsSL https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+    chmod a+x /usr/local/bin/docker-compose
+    # 创建个软链接，以后用 dc 命令来代替 docker-compose
+    # 若系统中存在 dc 则删除，这个 dc 就是个计算器，完全没有用
+    rm -rf `which dc`
+    ln -s /usr/local/bin/docker-compose /usr/bin/dc
+    
+    # 检查安装结果
+    if command -v docker-compose &> /dev/null; then
+        echo -e "执行: ${GREEN}dc version"
+        dc version
+        echo -e "${GREEN}Docker Compose安装成功！"
+    else
+        echo -e "${YELLOW}Docker Compose安装失败，请检查安装过程中的错误信息。"
+    fi
+else
+    echo -e "${YELLOW}Docker Compose已安装，无需重复安装。"
+fi
