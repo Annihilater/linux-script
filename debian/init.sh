@@ -17,6 +17,7 @@ apt update
 apt install vim -y
 apt install curl -y
 apt install htop -y
+apt install sudo -y
 
 # set alias ll
 echo "alias ll='ls -l'" >> /etc/profile && source /etc/profile
