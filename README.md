@@ -7,7 +7,7 @@
 wget -qO- https://raw.githubusercontent.com/Annihilater/linux-script/main/debian/init.sh | bash
 
 # CDN加速地址
-wget -qO- https://cdn.jsdelivr.net/gh/Annihilater/linux-script/main/debian/init.sh  | bash
+wget -qO- https://cdn.jsdelivr.net/gh/Annihilater/linux-script@main/debian/init.sh  | bash
 ```
 
 ## Ubuntu
@@ -16,6 +16,6 @@ wget -qO- https://cdn.jsdelivr.net/gh/Annihilater/linux-script/main/debian/init.
 wget -qO- https://raw.githubusercontent.com/Annihilater/linux-script/main/ubuntu/init.sh | bash
 
 # CDN加速地址
-wget -qO- https://cdn.jsdelivr.net/gh/Annihilater/linux-script/main/ubuntu/init.sh | bash
+wget -qO- https://cdn.jsdelivr.net/gh/Annihilater/linux-script@main/ubuntu/init.sh | bash
 
 ```
