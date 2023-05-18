@@ -12,7 +12,7 @@ sshd_config_path="/etc/ssh/sshd_config.d/ziji.conf"
 bash_sshd_config_path="/etc/ssh/sshd_config"
 
 # update 
-apt update
+apt update -y
 # install vim
 apt install vim -y
 apt install curl -y
