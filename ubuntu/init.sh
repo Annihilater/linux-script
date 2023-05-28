@@ -20,6 +20,8 @@ sudo apt install htop -y
 sudo apt install sudo -y
 sudo apt install zip -y
 
+sudo mkdir /opt/apps
+
 # set alias ll
 sudo echo "alias ll='ls -l'" >> /etc/profile && sudo source /etc/profile
 sudo source /etc/profile
