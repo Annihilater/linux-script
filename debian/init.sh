@@ -116,7 +116,11 @@ else
 fi
 
 echo -e "${GREEN}防火墙安装开始: sudo apt install ufw"
-sudo apt install ufw
+sudo apt purge ufw iptables -y
+sudo apt install iptables -y
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+sudo apt install ufw -y
 echo -e "${GREEN}防火墙安装成功: sudo apt install ufw"
 
 echo -e "${GREEN}防火墙状态: sudo ufw status verbose"
