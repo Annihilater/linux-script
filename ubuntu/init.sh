@@ -141,8 +141,8 @@ sudo ufw allow 30003
 sudo ufw allow 30004
 sudo ufw allow 40000
 
-echo -e "${GREEN}防火墙启动: sudo ufw enable"
-sudo ufw enable
+# echo -e "${GREEN}防火墙启动: sudo ufw enable"
+# sudo ufw enable
 
 echo -e "${GREEN}防火墙状态: sudo ufw status verbose"
 sudo ufw status verbose
