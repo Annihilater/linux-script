@@ -59,7 +59,7 @@ cat << EOF >> $sshd_config_path
 Port 22222
 PermitRootLogin yes
 MaxAuthTries 200
-PasswordAuthentication no
+PasswordAuthentication yes
 PermitEmptyPasswords no
 AllowAgentForwarding yes
 AllowTcpForwarding yes
