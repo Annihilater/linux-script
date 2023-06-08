@@ -13,7 +13,6 @@ bash_sshd_config_path="/etc/ssh/sshd_config"
 
 # update 
 sudo apt update -y
-# install vim
 sudo apt install vim -y
 sudo apt install curl -y
 sudo apt install htop -y
