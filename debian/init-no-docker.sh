@@ -137,6 +137,10 @@ sudo ufw allow 30001
 sudo ufw allow 30002
 sudo ufw allow 30003
 sudo ufw allow 30004
+sudo ufw allow 30005
+sudo ufw allow 30006
+sudo ufw allow 30007
+sudo ufw allow 30008
 sudo ufw allow 40000
 
 # echo -e "${GREEN}防火墙启动: sudo ufw enable"
