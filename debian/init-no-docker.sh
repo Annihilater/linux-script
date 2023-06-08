@@ -126,7 +126,7 @@ echo -e "${GREEN}防火墙安装成功: sudo apt install ufw"
 echo -e "${GREEN}防火墙状态: sudo ufw status verbose"
 sudo ufw status verbose
 
-echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/40000"
+echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/30005/30006/30007/30008/40000"
 sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 443
