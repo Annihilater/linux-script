@@ -114,36 +114,36 @@ systemctl restart sshd
 #     echo -e "${YELLOW}Docker Compose已安装，无需重复安装。"
 # fi
 
-echo -e "${GREEN}防火墙安装开始: sudo apt install ufw"
+echo -e "${GREEN}防火墙安装开始: apt install ufw"
 # sudo apt purge ufw iptables -y
 # sudo apt install iptables -y
 # sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 # sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
-sudo apt install ufw -y
-echo -e "${GREEN}防火墙安装成功: sudo apt install ufw"
+apt install ufw -y
+echo -e "${GREEN}防火墙安装成功: apt install ufw"
 
-echo -e "${GREEN}防火墙状态: sudo ufw status"
-sudo ufw status
+echo -e "${GREEN}防火墙状态: ufw status"
+ufw status
 
 echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/30005/30006/30007/30008/40000"
-sudo ufw allow 22
-sudo ufw allow 80
-sudo ufw allow 443
-sudo ufw allow 5555
-sudo ufw allow 8008
-sudo ufw allow 22222
-sudo ufw allow 30001
-sudo ufw allow 30002
-sudo ufw allow 30003
-sudo ufw allow 30004
-sudo ufw allow 30005
-sudo ufw allow 30006
-sudo ufw allow 30007
-sudo ufw allow 30008
-sudo ufw allow 40000
+ufw allow 22
+ufw allow 80
+ufw allow 443
+ufw allow 5555
+ufw allow 8008
+ufw allow 22222
+ufw allow 30001
+ufw allow 30002
+ufw allow 30003
+ufw allow 30004
+ufw allow 30005
+ufw allow 30006
+ufw allow 30007
+ufw allow 30008
+ufw allow 40000
 
-# echo -e "${GREEN}防火墙启动: sudo ufw enable"
-# sudo ufw enable
+# echo -e "${GREEN}防火墙启动: ufw enable"
+# ufw enable
 
 echo -e "${GREEN}防火墙状态: sudo ufw status"
-sudo ufw status
+ufw status
