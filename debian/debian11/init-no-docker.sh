@@ -164,3 +164,6 @@ ufw allow 40000
 
 echo -e "${GREEN}防火墙状态: sudo ufw status"
 ufw status
+
+# install xrayr
+bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
