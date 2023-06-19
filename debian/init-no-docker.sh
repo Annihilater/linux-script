@@ -33,7 +33,7 @@ apt update -y
 apt install vim -y
 apt install curl -y
 apt install htop -y
-apt install sudo -y
+#apt install sudo -y
 apt install zip -y
 
 mkdir /opt/apps
@@ -75,7 +75,7 @@ cat << EOF >> $sshd_config_path
 Port 22
 PermitRootLogin yes
 MaxAuthTries 200
-PasswordAuthentication no
+PasswordAuthentication yes
 PermitEmptyPasswords no
 AllowAgentForwarding yes
 AllowTcpForwarding yes
