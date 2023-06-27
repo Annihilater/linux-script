@@ -147,10 +147,6 @@ ufw status
 
 echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/30005/30006/30007/30008/40000"
 ufw allow 22
-ufw allow 80
-ufw allow 443
-ufw allow 5555
-ufw allow 8008
 ufw allow 22222
 ufw allow 30001
 ufw allow 30002
@@ -160,7 +156,6 @@ ufw allow 30005
 ufw allow 30006
 ufw allow 30007
 ufw allow 30008
-ufw allow 40000
 
 # echo -e "${GREEN}防火墙启动: ufw enable"
 # ufw enable

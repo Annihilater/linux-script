@@ -127,10 +127,6 @@ sudo ufw status
 
 echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/30005/30006/30007/30008/40000"
 sudo ufw allow 22
-sudo ufw allow 80
-sudo ufw allow 443
-sudo ufw allow 5555
-sudo ufw allow 8008
 sudo ufw allow 22222
 sudo ufw allow 30001
 sudo ufw allow 30002
@@ -140,7 +136,6 @@ sudo ufw allow 30005
 sudo ufw allow 30006
 sudo ufw allow 30007
 sudo ufw allow 30008
-sudo ufw allow 40000
 
 # echo -e "${GREEN}防火墙启动: sudo ufw enable"
 # sudo ufw enable
