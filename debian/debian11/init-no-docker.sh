@@ -35,6 +35,8 @@ apt install curl -y
 apt install htop -y
 apt install sudo -y
 apt install zip -y
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+apt install speedtest -y
 
 mkdir /opt/apps
 
