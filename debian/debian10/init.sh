@@ -19,6 +19,7 @@ apt install htop -y
 apt install sudo -y
 apt install zip -y
 apt install iperf -y
+apt install iperf3 -y
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 apt install speedtest -y
 
