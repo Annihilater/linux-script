@@ -7,7 +7,7 @@ Error="${Red_font_prefix}[错误]${Font_color_suffix}"
 Tip="${Green_font_prefix}[注意]${Font_color_suffix}"
 
 copyright(){
-    clear
+    # clear
 echo "\
 ############################################################
 
