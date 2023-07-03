@@ -248,7 +248,7 @@ get_system_info() {
   virt_check
 }
 
-copyright
+# copyright
 # TCP窗口调优
 tcp_tune
 # 开启内核转发
