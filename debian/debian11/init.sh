@@ -18,10 +18,17 @@ apt install curl -y
 apt install htop -y
 apt install sudo -y
 apt install zip -y
+
+# install iperf and iperf3
 apt install iperf -y
 apt install iperf3 -y
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 apt install speedtest -y
+
+# install tcping
+apt install tcptraceroute -y
+wget http://www.vdberg.org/~richard/tcpping -O /usr/bin/tcping
+chmod +x /usr/bin/tcping
 
 mkdir /opt/apps
 
