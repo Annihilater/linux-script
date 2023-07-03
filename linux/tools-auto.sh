@@ -255,3 +255,6 @@ tcp_tune
 enable_forwarding
 # 系统资源限制调优
 ulimit_tune
+
+# 检查
+lsmod | grep bbr

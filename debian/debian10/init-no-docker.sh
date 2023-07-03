@@ -183,4 +183,9 @@ echo -e "${GREEN}防火墙状态: sudo ufw status"
 ufw status
 
 # install xrayr
+echo -e "${GREEN}安装 XrayR:"
 bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
+
+# Network Optimization
+echo -e "${GREEN}网络优化:"
+bash <(curl -Ls https://raw.githubusercontent.com/Annihilater/linux-script/main/linux/tools-auto.sh)
