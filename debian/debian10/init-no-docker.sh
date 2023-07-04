@@ -31,30 +31,6 @@ bash_sshd_config_path="/etc/ssh/sshd_config"
 # update 
 apt update -y
 
-echo -e "${GREEN}install vim curl htop zip${NC}"
-apt install vim -y
-apt install curl -y
-apt install htop -y
-#apt install sudo -y
-apt install zip -y
-
-# install iperf and iperf3
-echo -e "${GREEN}install iperf iperf3${NC}"
-apt install iperf -y
-apt install iperf3 -y
-curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-apt install speedtest -y
-
-# install tcping
-echo -e "${GREEN}install tcping${NC}"
-apt install tcptraceroute -y
-wget http://www.vdberg.org/~richard/tcpping -O /usr/bin/tcping
-chmod +x /usr/bin/tcping
-
-# install nexttrace
-echo -e "${GREEN}install nexttrace${NC}"
-bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
-
 mkdir /opt/apps
 
 # set alias ll
@@ -109,6 +85,30 @@ EOF
 
 # restart sshd
 systemctl restart sshd
+
+echo -e "${GREEN}install vim curl htop zip${NC}"
+apt install vim -y
+apt install curl -y
+apt install htop -y
+#apt install sudo -y
+apt install zip -y
+
+# install iperf and iperf3
+echo -e "${GREEN}install iperf iperf3${NC}"
+apt install iperf -y
+apt install iperf3 -y
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+apt install speedtest -y
+
+# install tcping
+echo -e "${GREEN}install tcping${NC}"
+apt install tcptraceroute -y
+wget http://www.vdberg.org/~richard/tcpping -O /usr/bin/tcping
+chmod +x /usr/bin/tcping
+
+# install nexttrace
+echo -e "${GREEN}install nexttrace${NC}"
+bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
 
 # # 检查Docker是否已安装
 # if ! command -v docker &> /dev/null; then
