@@ -1,21 +1,21 @@
 #!/bin/bash
 
-# # 备份源
-# mv /etc/apt/sources.list /etc/apt/sources.list.old
-# # 恢复官方那个源
-# cat > /etc/apt/sources.list << EOF
-# deb https://deb.debian.org/debian/ bullseye main contrib non-free
-# deb-src https://deb.debian.org/debian/ bullseye main contrib non-free
+# 备份源
+mv /etc/apt/sources.list /etc/apt/sources.list.old
+# 恢复官方那个源
+cat > /etc/apt/sources.list << EOF
+deb https://deb.debian.org/debian/ bullseye main contrib non-free
+deb-src https://deb.debian.org/debian/ bullseye main contrib non-free
 
-# deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free
-# deb-src https://deb.debian.org/debian/ bullseye-updates main contrib non-free
+deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free
+deb-src https://deb.debian.org/debian/ bullseye-updates main contrib non-free
 
-# deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free
-# deb-src https://deb.debian.org/debian/ bullseye-backports main contrib non-free
+deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free
+deb-src https://deb.debian.org/debian/ bullseye-backports main contrib non-free
 
-# deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free
-# deb-src https://deb.debian.org/debian-security/ bullseye-security main contrib non-free
-# EOF
+deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+deb-src https://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+EOF
 
 # 设定颜色代码
 GREEN='\033[0;32m'
