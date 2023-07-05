@@ -88,7 +88,7 @@ echo -e "${GREEN}install vim curl htop zip${NC}"
 apt install vim -y
 apt install curl -y
 apt install htop -y
-#apt install sudo -y
+apt install sudo -y
 apt install zip -y
 
 # install iperf and iperf3
