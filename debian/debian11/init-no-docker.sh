@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# 检查是否提供了参数
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 hostname"
+    exit 1
+fi
+
+# 提取主机名参数
+HOSTNAME=$1
+
+# 使用sudo确保我们有足够的权限来执行这些命令
+sudo hostnamectl set-hostname $HOSTNAME
+echo "127.0.0.1 $HOSTNAME" | sudo tee -a /etc/hosts
+
 # 备份源
 mv /etc/apt/sources.list /etc/apt/sources.list.old
 # 恢复官方那个源
