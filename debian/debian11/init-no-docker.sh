@@ -90,6 +90,7 @@ apt install curl -y
 apt install htop -y
 apt install sudo -y
 apt install zip -y
+apt install p7zip-full -y
 
 # install iperf and iperf3
 echo -e "${GREEN}install iperf iperf3${NC}"
