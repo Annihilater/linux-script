@@ -176,7 +176,7 @@ echo -e "${GREEN}防火墙安装成功: apt install ufw"
 echo -e "${GREEN}防火墙状态: ufw status"
 ufw status
 
-echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/30005/30006/30007/30008/40000"
+echo -e "${GREEN}防火墙端口开启: 22/22222/30001/30002/30003/30004/30005/30006/30007/30008"
 ufw allow 22
 ufw allow 22222
 ufw allow 30001

@@ -1,5 +1,18 @@
  #!/bin/bash
 
+ # 检查是否提供了参数
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 hostname"
+    exit 1
+fi
+
+# 提取主机名参数
+HOSTNAME=$1
+
+# 使用sudo确保我们有足够的权限来执行这些命令
+sudo hostnamectl set-hostname $HOSTNAME
+echo "127.0.0.1 $HOSTNAME" | sudo tee -a /etc/hosts
+
 # 设定颜色代码
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -145,7 +158,7 @@ echo -e "${GREEN}防火墙安装成功: sudo apt install ufw"
 echo -e "${GREEN}防火墙状态: sudo ufw status"
 sudo ufw status
 
-echo -e "${GREEN}防火墙端口开启: 22/80/443/555/8008/22222/30001/30002/30003/30004/30005/30006/30007/30008/40000"
+echo -e "${GREEN}防火墙端口开启: 22/22222/30001/30002/30003/30004/30005/30006/30007/30008"
 sudo ufw allow 22
 sudo ufw allow 22222
 sudo ufw allow 30001
