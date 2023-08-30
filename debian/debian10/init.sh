@@ -265,7 +265,7 @@ EOL
 )
 
 # 写入到 /etc/Xrayr/route.json 文件中
-echo "$ROUTE_DATA" > /etc/Xrayr/route.json
+echo "$ROUTE_DATA" > /etc/XrayR/route.json
 
 # Network Optimization
 echo -e "${GREEN}网络优化:"
