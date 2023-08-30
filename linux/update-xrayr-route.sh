@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 定义 JSON 数据
-JSON_DATA=$(cat <<EOL
+# 定义 JSON 数据的第一部分
+JSON_PART1=$(cat <<EOL
 {
     "domainStrategy": "IPOnDemand",
     "rules": [
@@ -12,6 +12,11 @@ JSON_DATA=$(cat <<EOL
                 "geoip:private"
             ]
         },
+EOL
+)
+
+# 定义 JSON 数据的第二部分
+JSON_PART2=$(cat <<EOL
         {
             "type": "field",
             "outboundTag": "block",
@@ -38,6 +43,28 @@ JSON_DATA=$(cat <<EOL
                 "regexp:(.*.||)(taobao).(com)"
             ]
         },
+EOL
+)
+
+# 如果 "openai" 参数存在，定义额外的 JSON 数据
+if [ "$1" == "openai" ]; then
+    JSON_OPENAI=$(cat <<EOL
+        {
+            "type": "field",
+            "outboundTag": "socks5-warp",
+            "domain": [
+                "openai.com",
+                "sentry.io"
+            ]
+        },
+EOL
+)
+else
+    JSON_OPENAI=""
+fi
+
+# 定义 JSON 数据的第三部分
+JSON_PART3=$(cat <<EOL
         {
             "type": "field",
             "outboundTag": "block",
@@ -78,5 +105,8 @@ JSON_DATA=$(cat <<EOL
 EOL
 )
 
-# 写入到 /etc/Xrayr/route.json 文件中
-echo "$JSON_DATA" > /etc/XrayR/route.json
+# 将所有部分拼接起来
+FULL_JSON="$JSON_PART1$JSON_PART2$JSON_OPENAI$JSON_PART3"
+
+# 写入到 /etc/XrayR/route.json 文件中
+echo "$FULL_JSON" > /etc/XrayR/route.json
