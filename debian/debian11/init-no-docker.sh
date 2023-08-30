@@ -262,11 +262,6 @@ ROUTE_DATA=$(cat <<EOL
         },
         {
             "type": "field",
-            "outboundTag": "socks5-warp",
-            "domain": []
-        },
-        {
-            "type": "field",
             "outboundTag": "IPv6_out",
             "domain": [
                 "geosite:netflix"
