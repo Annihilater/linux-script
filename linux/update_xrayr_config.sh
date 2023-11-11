@@ -34,4 +34,10 @@ echo "Rule list path enabled."
 echo "Configurations updated in $CONFIG_FILE"
 
 # 安装 jq 且格式化 route.json
+echo "$JQ_IN: Before"
+cat $JQ_IN 
+
 apt install jq -y && jq . $JQ_IN > $JQ_OUT && mv $JQ_OUT $JQ_IN
+echo "----------------------------------------------------------"
+echo "$JQ_IN: After"
+cat $JQ_IN 
