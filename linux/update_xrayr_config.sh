@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定配置文件路径
-CONFIG_FILE="config.yml"
+CONFIG_FILE="/etc/XrayR/config.yml"
 
 # 开始更新配置
 echo "Starting configuration updates..."
