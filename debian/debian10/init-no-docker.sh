@@ -108,6 +108,7 @@ apt install vim -y
 apt install curl -y
 apt install htop -y
 #apt install sudo -y
+apt install jq -y
 apt install zip -y
 apt install p7zip-full -y
 
@@ -230,8 +231,13 @@ ROUTE_DATA=$(cat <<EOL
         },
         {
             "type": "field",
+            "outboundTag": "IPv4_out",
+            "port": "22222,41369,54321"
+        },
+        {
+            "type": "field",
             "outboundTag": "block",
-            "port": "23,24,25,107,194,445,465,587,992,3389,6665-6669,6679,6697,6881-6999,7000"
+            "port": "23,24,25,107,194,445,465,587,992,3389,6665-6669,6679,6697,6881-6999,7000,10000-65535"
         },
         {
             "type": "field",
