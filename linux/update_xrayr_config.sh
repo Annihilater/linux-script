@@ -41,3 +41,5 @@ apt install jq -y && jq . $JQ_IN > $JQ_OUT && mv $JQ_OUT $JQ_IN
 echo "----------------------------------------------------------"
 echo "$JQ_IN: After"
 cat $JQ_IN 
+
+echo "End!!!"
