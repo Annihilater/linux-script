@@ -2,6 +2,8 @@
 
 # 指定配置文件路径
 CONFIG_FILE="/etc/XrayR/config.yml"
+JQ_IN="/etc/XrayR/route.json"
+JQ_OUT="/etc/XrayR/route_tmp.json"
 
 # 开始更新配置
 echo "Starting configuration updates..."
@@ -32,7 +34,4 @@ echo "Rule list path enabled."
 echo "Configurations updated in $CONFIG_FILE"
 
 # 安装 jq 且格式化 route.json
-
-JQ_IN="/etc/XrayR/route.json"
-JQ_OUT="/etc/XrayR/route_tmp.json"
 apt install jq -y && jq . $JQ_IN > $JQ_OUT && mv $JQ_OUT $JQ_IN
