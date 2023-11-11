@@ -30,3 +30,6 @@ echo "Rule list path enabled."
 
 # 更新完毕
 echo "Configurations updated in $CONFIG_FILE"
+
+# 安装 jq 且格式化 route.json
+apt install jq -y && jq . route.json > tmp.json && mv tmp.json route.json
