@@ -42,4 +42,6 @@ echo "----------------------------------------------------------"
 echo "$JQ_IN: After"
 cat $JQ_IN 
 
+xrayr restart
+
 echo "End!!!"
