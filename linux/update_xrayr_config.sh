@@ -26,9 +26,9 @@ sed -i 's|ErrorPath: # /etc/XrayR/error.log|ErrorPath: /etc/XrayR/error.log|g' $
 echo "Error log path enabled."
 
 # 审计规则 - 启用规则列表路径
-echo "Enabling rule list path..."
-sed -i 's|RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file|RuleListPath: /etc/XrayR/rulelist # Path to local rulelist file|g' $CONFIG_FILE
-echo "Rule list path enabled."
+# echo "Enabling rule list path..."
+# sed -i 's|RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file|RuleListPath: /etc/XrayR/rulelist # Path to local rulelist file|g' $CONFIG_FILE
+# echo "Rule list path enabled."
 
 # 更新完毕
 echo "Configurations updated in $CONFIG_FILE"
