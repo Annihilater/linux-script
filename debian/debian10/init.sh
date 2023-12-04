@@ -105,9 +105,9 @@ apt install tcptraceroute -y
 wget http://www.vdberg.org/~richard/tcpping -O /usr/bin/tcping
 chmod +x /usr/bin/tcping
 
-# install nexttrace
-echo -e "${GREEN}install nexttrace${NC}"
-bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
+# # install nexttrace
+# echo -e "${GREEN}install nexttrace${NC}"
+# bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
 
 # 检查Docker是否已安装
 if ! command -v docker &> /dev/null; then
@@ -211,7 +211,7 @@ ROUTE_DATA=$(cat <<EOL
         {
             "type": "field",
             "outboundTag": "IPv4_out",
-            "port": "22222,41369,54321"
+            "port": "22222,30010,41369,50051,54321,60001"
         },
         {
             "type": "field",
@@ -240,4 +240,8 @@ echo "$ROUTE_DATA" > /etc/XrayR/route.json
 
 # Network Optimization
 echo -e "${GREEN}网络优化:"
-bash <(curl -Ls https://raw.githubusercontent.com/Annihilater/linux-script/main/linux/tools-auto.sh)
+# nnc TCP 优化
+# bash <(curl -Ls https://raw.githubusercontent.com/Annihilater/linux-script/main/linux/tools-auto.sh)
+
+# pfgo TCP优化
+bash <(curl -sSL "https://scripts.zeroteam.top/PortForwardGo/tcp.sh")
