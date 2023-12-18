@@ -88,8 +88,9 @@ apt install vim -y
 apt install curl -y
 apt install htop -y
 #apt install sudo -y
-apt install zip -y
 apt install jq -y
+apt install zip -y
+apt install tree -y
 apt install p7zip-full -y
 
 # install iperf and iperf3
@@ -185,6 +186,9 @@ sudo ufw status
 echo -e "${GREEN}安装 XrayR:"
 bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
 
+# stop xrayr 
+xrayr stop
+
 # 修改 xrayr 的路由，禁止某些操作
 # 定义 JSON 数据
 ROUTE_DATA=$(cat <<EOL
@@ -211,7 +215,7 @@ ROUTE_DATA=$(cat <<EOL
         {
             "type": "field",
             "outboundTag": "IPv4_out",
-            "port": "22222,30010,41369,50051,54321,60001"
+            "port": "123,22222,30010,41369,50051,54321,60001"
         },
         {
             "type": "field",
@@ -241,7 +245,7 @@ echo "$ROUTE_DATA" > /etc/XrayR/route.json
 # Network Optimization
 echo -e "${GREEN}网络优化:"
 # nnc TCP 优化
-# bash <(curl -Ls https://raw.githubusercontent.com/Annihilater/linux-script/main/linux/tools-auto.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Annihilater/linux-script/main/linux/tools-auto.sh)
 
 # pfgo TCP优化
-bash <(curl -sSL "https://scripts.zeroteam.top/PortForwardGo/tcp.sh")
+# bash <(curl -sSL "https://scripts.zeroteam.top/PortForwardGo/tcp.sh")
