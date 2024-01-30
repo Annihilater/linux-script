@@ -112,6 +112,7 @@ apt install jq -y
 apt install zip -y
 apt install tree -y
 apt install p7zip-full -y
+apt install httpie -y
 
 # install iperf and iperf3
 echo -e "${GREEN}install iperf iperf3${NC}"
