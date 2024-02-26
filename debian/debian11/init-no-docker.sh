@@ -84,7 +84,7 @@ fi
 
 # update sshd_config
 cat << EOF >> $sshd_config_path
-Port 22222
+Port 22
 PermitRootLogin yes
 MaxAuthTries 200
 PasswordAuthentication no
